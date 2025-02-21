@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap - Taşkın Sneakers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="tskn.css">
+</head>
+
+<body>
+
+    <div class="wrapper" id="login-wrapper">
+        <form id="loginForm">
+            <h1>Giriş</h1>
+            <div class="input-box">
+                <input type="text" id="login-username" placeholder="Kullanıcı adı" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" id="login-password" placeholder="Şifre" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Hatırla </label>
+                <a href="#">Şifremi unuttum?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="register-link">
+                <p>Hesabım yok? <a href="#" onclick="toggleForms()">Kaydol</a></p>
+            </div>
+            <div id="login-error-message" style="color: red; text-align: center; display: none;">
+                Hatalı kullanıcı adı veyaz şifre!
+            </div>
+        </form>
+    </div>
+
+    <div class="wrapper" id="register-wrapper" style="display: none;">
+        <form id="registerForm">
+            <h1>Kayıt</h1>
+            <div class="input-box">
+                <input type="text" id="register-username" placeholder="Kullanıcı Adı" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" id="register-password" placeholder="Şifre" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <button type="submit" class="btn">Kaydol</button>
+            <div class="register-link">
+                <p>Zaten hesabın bulunmakta? <a href="#" onclick="toggleForms()">Giriş</a></p>
+            </div>
+            <div id="register-success-message" style="color: green; text-align: center; display: none;">
+                Kayıt başarılı! Lütfen giriş yapın.
+            </div>
+        </form>
+    </div>
+
+    <script src="java.js"></script>
+</body>
+
+</html>
